@@ -1,0 +1,76 @@
+/* 表單樣式 */
+#courseForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* 搜尋按鈕樣式 */
+.btn-cf {
+    background-color: rgb(69, 5, 101);
+    color: white; /* 字體顏色 */
+    padding: 10px 20px; /* 上下和左右內邊距 */
+    border: none; /* 去掉邊框 */
+    border-radius: 5px; /* 圓角效果 */
+    cursor: pointer; /* 鼠標懸停時顯示手指形狀 */
+    font-size: 16px; /* 字體大小 */
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s; /* 過渡效果 */
+}
+
+
+.btn-cf:hover {
+    background-color:  rgb(69, 5, 101); /* 鼠標懸停時的背景顏色 */
+    transform: scale(1.05); /* 鼠標懸停時輕微放大 */
+}
+
+
+/* 課程名稱輸入框樣式 */
+.custom-select label {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.custom-select input {
+    width: 60%;
+    height: 35px;
+    border: 2px solid hsl(0, 1%, 50%);
+    margin: 30px 0;
+    margin-left: 10px;
+    border-radius: 6px;
+}
+
+/* 使用說明區塊樣式 */
+.wrap-cf {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle farthest-corner at left, yellow, red);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, .5) 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    left: 35%;
+    top: 25%;
+}
+
+/* 額外的按鈕樣式 */
+.submitCommentButton {
+    padding: 8px 12px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submitCommentButton:hover {
+    background-color: #007bb5;
+}

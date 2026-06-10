@@ -1,0 +1,219 @@
+.styled-table {
+    width: 100%;
+    border-collapse: separate;
+    /* 使用 separate 而不是 collapse 來實現圓角效果 */
+    border-spacing: 0;
+    /* 移除分隔空間，讓邊框貼合 */
+    font-size: 16px;
+    border-radius: 12px;
+    /* 設置表格的圓角 */
+    overflow: hidden;
+    /* 確保圓角不會被內容覆蓋 */
+}
+.styled-table th, .styled-table td {
+    border-bottom: 1px solid #ddd;
+    /* 單元格底部邊框 */
+    padding: 8px;
+    text-align: left;
+}
+.styled-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.styled-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.styled-table tr:hover {
+    background-color: #f1f1f1;
+}
+/* 額外設置圓角 */
+
+.styled-table th:first-child {
+    border-top-left-radius: 12px;
+    /* 左上角圓角 */
+}
+.styled-table th:last-child {
+    border-top-right-radius: 12px;
+    /* 右上角圓角 */
+}
+.styled-table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+    /* 左下角圓角 */
+}
+.styled-table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+    /* 右下角圓角 */
+}
+
+.home .toggle-sidebar{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.home .toggle-sidebar .text{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+}
+
+.wrap-ss {
+    position: absolute;
+    width: auto;
+    height: 200px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, .5) 0 0 5px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    overflow: hidden;  
+    left: 20%;
+    top: 15%;
+    overflow: auto;
+    padding: 0 60px;
+}
+
+.wrap-ss1 {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, .5) 0 0 5px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    overflow: hidden;  
+    left: 50%;
+    top: 15%;
+    overflow: auto;
+    padding: 0 60px;
+}
+
+.wrap-ss2{
+    position: absolute;
+    width: 945px;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, .5) 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  
+    left: 20%;
+    top: 45%;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.wrapper-ss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 45%;
+    right: -15%;
+}
+
+#wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 40%;
+    right: 0;
+    height: auto;
+   
+}
+
+#button-container2 {
+    position: fixed;
+    top: 0%;
+    right: 75%;
+    width: 20%;
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.content {
+    display: none;
+    width: 120%;
+}
+
+.active {
+    display: block;
+}
+
+.search {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search {
+    color: gray;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+    right: -22%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 3px 5px 3px 5px;
+}
+
+.search:hover {
+    color: rgb(69, 5, 101);
+}
+
+.search:focus {
+    border: rgb(69, 5, 101) solid 3px;
+    border-radius: 7px;
+    color: rgb(69, 5, 101);
+}
+
+.search:hover,
+.search:focus,
+.search.active {
+    color: rgb(69, 5, 101); /* hover/focus/active 顏色 */
+    border: rgb(69, 5, 101) solid 3px; /* hover/focus/active 邊框 */
+    border-radius: 7px;
+    background-color: rgba(69, 5, 101, 0.1); /* hover/focus/active 背景色 */
+    font-weight: bold;
+}
+
+.content3,.wrap-ss::-webkit-scrollbar {
+    width: 15px; /* 滚动条的宽度 */
+}
+
+.content3,.wrap-ss::-webkit-scrollbar-track {
+    background: transparent; /* 滚动条轨道的颜色 */
+}
+
+.content3,.wrap-ss::-webkit-scrollbar-thumb {
+    background-color: #888; /* 滚动条的颜色 */
+    border-radius: 15px; /* 圆角 */
+    border: 2px solid #f1f1f1; /* 给滚动条加上一个边框 */
+}
+
+.content3,.wrap-ss::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* 滚动条在悬停时的颜色 */
+}

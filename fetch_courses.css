@@ -1,0 +1,334 @@
+.styled-table {
+    width: 100%;
+    border-collapse: separate; /* 使用 separate 而不是 collapse 來實現圓角效果 */
+    border-spacing: 0; /* 移除分隔空間，讓邊框貼合 */
+    font-size: 16px;
+    border: 1px solid #ddd; /* 外圍邊框 */
+    border-radius: 12px; /* 設置表格的圓角 */
+    overflow: hidden; /* 確保圓角不會被內容覆蓋 */
+}
+
+.styled-table th, .styled-table td {
+    border-bottom: 1px solid #ddd; /* 單元格底部邊框 */
+    padding: 8px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 額外設置圓角 */
+.styled-table th:first-child {
+    border-top-left-radius: 12px; /* 左上角圓角 */
+}
+
+.styled-table th:last-child {
+    border-top-right-radius: 12px; /* 右上角圓角 */
+}
+
+.styled-table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px; /* 左下角圓角 */
+}
+
+.styled-table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px; /* 右下角圓角 */
+}
+       
+.styled-table {
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table th, .styled-table td {
+    padding: 15px 80px;
+    border: 1px solid #ddd;
+}
+.styled-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.styled-table td {
+    text-align: center;
+}       
+.commentInput {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}     
+       
+.modal {
+    display: none; /* 初始狀態隱藏 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* 背景透明度 */  
+}
+
+/* 彈窗內部內容 */
+.icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: rgb(69, 5, 101);
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* 關閉按鈕樣式 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 彈窗內容區域 */
+#allCommentsContent {
+    margin-top: 20px;
+    max-height: 570px; /* 限制高度，讓內容可以滾動 */
+    overflow-y: auto; /* 允許垂直滾動 */
+}
+
+/* 單個評論區塊 */
+#allCommentsContent .content div {
+    margin-bottom: 10px;  /* 每個評論之間的間距 */
+    padding: 15px;  /* 內邊距，增加內容與邊框之間的距離 */
+    border: 1px solid #ddd;  /* 輕微的邊框 */
+    border-radius: 10px;  /* 圓角效果 */
+    background-color: #f9f9f9;  /* 淺灰色背景，讓內容區塊更加明顯 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* 加入陰影效果 */
+    font-size: 16px;  /* 字體大小 */
+    line-height: 1.5;  /* 行高 */
+}
+
+/* 彈窗內的評論輸入框 */
+#modalComment {
+    width: 95%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #c0c0c0;
+    border-radius: 5px;
+    resize: none;
+}
+
+#submitModalComment {
+    background-color: rgb(69, 5, 101);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: fixed;
+    top: 70%;
+    transition: background-color 0.3s, transform 0.3s; /* 過渡效果 */
+}
+
+
+#submitModalComment:hover {
+    background-color: rgb(50, 5, 80);
+    transform: scale(1.05); /* 鼠標懸停時輕微放大 */
+}
+
+.btn-cf {
+    background-color:  rgb(69, 5, 101);/* 背景顏色 */
+    color: white; /* 字體顏色 */
+    padding: 10px 20px; /* 上下和左右內邊距 */
+    border: none; /* 去掉邊框 */
+    border-radius: 5px; /* 圓角效果 */
+    cursor: pointer; /* 鼠標懸停時顯示手指形狀 */
+    font-size: 16px; /* 字體大小 */
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s; /* 過渡效果 */
+}
+
+.btn-cf:hover {
+    background-color: rgb(69, 5, 101); /* 鼠標懸停時的背景顏色 */
+    transform: scale(1.05); /* 鼠標懸停時輕微放大 */
+}
+
+.search:hover,
+.search:focus,
+.search.active {
+    color: rgb(69, 5, 101); /* hover/focus/active 顏色 */
+    border: rgb(69, 5, 101) solid 3px; /* hover/focus/active 邊框 */
+    border-radius: 7px;
+    background-color: rgba(69, 5, 101, 0.1); /* hover/focus/active 背景色 */
+    font-weight: bold;
+    
+}
+
+
+/* ============================= */
+#button-container {
+    position: fixed; /* 使用絕對定位，讓其相對於父容器定位 */
+    top: 10px; /* 根據需要調整距離彈出視窗頂部的距離 */
+    right: 10%; /* 可以根據需要調整 */
+    width: 80%; /* 可以根據需要調整 */
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid #ddd; /* 添加邊框 */
+    border-radius: 8px; /* 圓角效果 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 加入陰影 */
+    z-index: 1001; /* 確保其層級高於彈出視窗 */
+}
+
+
+.active {
+    display: block;
+}
+
+.search {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search {
+    color: gray;
+    position: relative;
+    display: table-column;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+    right: -5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 80px;
+    padding: 3px 5px 3px 5px;
+}
+
+.search:hover {
+    color: rgb(69, 5, 101);
+}
+
+.search:focus {
+    border: rgb(69, 5, 101) solid 3px;
+    border-radius: 7px;
+    color: rgb(69, 5, 101);
+}
+
+.styled-button {
+    background-color: #4CAF50; /* 背景顏色 */
+    color: white; /* 字體顏色 */
+    padding: 10px 20px; /* 上下和左右內邊距 */
+    border: none; /* 去掉邊框 */
+    border-radius: 5px; /* 圓角效果 */
+    cursor: pointer; /* 鼠標懸停時顯示手指形狀 */
+    font-size: 16px; /* 字體大小 */
+    transition: background-color 0.3s, transform 0.3s; /* 過渡效果 */
+}
+
+.styled-button:hover {
+    background-color: #45a049; /* 鼠標懸停時的背景顏色 */
+    transform: scale(1.05); /* 鼠標懸停時輕微放大 */
+}
+
+.styled-button:focus {
+    outline: none; /* 去掉聚焦時的邊框 */
+}
+
+.home .toggle-sidebar{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.home .toggle-sidebar .text{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+}
+
+#courseForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#commentModal{
+    width: 700px;
+    height: 270px;
+    position:fixed;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, .5) 0 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);  
+    transition: transform .5s ease;
+    left: 30%;
+    top: 35%;
+    z-index: 1;
+}
+
+#allCommentsModal{
+    position: fixed;
+    width: 1000px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, .5) 0 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 改變對齊方式 */
+    overflow: hidden;
+    transform: scale(0);  
+    transition: transform .5s ease;
+    left: 20%;
+    top: 20%;
+    z-index: 99;
+}

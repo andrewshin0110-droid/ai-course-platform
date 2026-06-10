@@ -1,0 +1,99 @@
+:root{
+    --color_dark1: rgb(57, 3, 57);
+    --color_dark2: rgb(193, 10, 193);
+    --color_light1: rgb(247, 244, 247);
+    --color_light2: rgb(223, 196, 223);
+}
+
+.wrap-ss {
+    position: absolute;
+    width: 1300px;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, .5) 0 0 5px;
+    display: flex;
+    flex-direction: column;  /* 讓內容垂直排列 */
+    align-items: center;     /* 讓內容水平居中 */
+    padding: 30px;
+    left: 5%;
+    top: 5%;
+    overflow: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: separate;
+    /* 使用 separate 而不是 collapse 來實現圓角效果 */
+    border-spacing: 0;
+    /* 移除分隔空間，讓邊框貼合 */
+    font-size: 16px;
+    border-radius: 12px;
+    /* 設置表格的圓角 */
+    overflow: hidden;
+    /* 確保圓角不會被內容覆蓋 */
+}
+.styled-table th, .styled-table td {
+    border-bottom: 1px solid #ddd;
+    /* 單元格底部邊框 */
+    padding: 8px;
+    text-align: left;
+}
+.styled-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.styled-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.styled-table tr:hover {
+    background-color: #f1f1f1;
+}
+/* 額外設置圓角 */
+
+.styled-table th:first-child {
+    border-top-left-radius: 12px;
+    /* 左上角圓角 */
+}
+.styled-table th:last-child {
+    border-top-right-radius: 12px;
+    /* 右上角圓角 */
+}
+.styled-table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+    /* 左下角圓角 */
+}
+.styled-table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+    /* 右下角圓角 */
+}
+
+#downloadBtn {
+    background-color: #4CAF50;/* 背景顏色 */
+    color: white; /* 字體顏色 */
+    padding: 10px 20px; /* 上下和左右內邊距 */
+    border: none; /* 去掉邊框 */
+    border-radius: 5px; /* 圓角效果 */
+    cursor: pointer; /* 鼠標懸停時顯示手指形狀 */
+    font-size: 16px; /* 字體大小 */
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s; /* 過渡效果 */
+}
+#downloadBtn:hover {
+    background-color: #45a049; /* 鼠標懸停時的背景顏色 */
+    transform: scale(1.05); /* 鼠標懸停時輕微放大 */
+}
+
+.home{
+    position: relative;
+    background-color: var(--color_light1);
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 300vh;
+    transition: all .5s ease;
+}
+  
+  
+  
