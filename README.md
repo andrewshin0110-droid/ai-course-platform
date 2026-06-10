@@ -1,5 +1,13 @@
 # 🎓 長庚大學 ICGU 智慧選課與成績管理平台 (AI-Powered Campus Platform)
 
+## 🛠 專案技術棧 (Tech Stack)
+
+* **AI & Data Intelligence**: OpenAI API (LLM 總結), Python / NLP 文字處理分類器, Custom GPTs Plugin (智慧選課助理)
+* **Backend Core**: PHP 8.x (負責動態 SQL 拼接、資料庫核心邏輯與 API 對接)
+* **Database**: MySQL 8.0 (多表關聯設計、字串時間大小比對)
+* **Frontend**: HTML5, CSS3, JavaScript (Vanilla JS 異步資料渲染與彈窗攔截)
+* **Tools**: Git, VS code, DataGrip
+
 ## 📌 專案源起與畢業生自述
 本專案為長庚大學資管系的畢業專題作品。設計初衷是為了解決校園教務系統在「選課資訊過載、空堂篩選僵化、以及論壇社群評論失控」等現實痛點。
 
@@ -46,14 +54,6 @@
 * **防禦性程式設計**：時序上利用 `ORDER BY` 確保正確性，前端輸出則全面封裝 `htmlspecialchars()` 進行 HTML 實體編碼，徹底阻絕儲存型跨站指令碼（Stored XSS）攻擊。並與下載腳本配合，實作歷年修課 CSV 檔一鍵下載。
 
 ---
-
-## 🛠 專案技術棧 (Tech Stack)
-
-* **AI & Data Intelligence**: OpenAI API (LLM 總結), Python / NLP 文字處理分類器, Custom GPTs Plugin (智慧選課助理)
-* **Backend Core**: PHP 8.x (負責動態 SQL 拼接、資料庫核心邏輯與 API 對接)
-* **Database**: MySQL 8.0 (多表關聯設計、字串時間大小比對)
-* **Frontend**: HTML5, CSS3, JavaScript (Vanilla JS 異步資料渲染與彈窗攔截)
-* **Tools**: Git, VS code,
 
 ### 🔒 智慧課程論壇：惡意言論即時攔截展示
 
