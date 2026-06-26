@@ -3,10 +3,10 @@
 ## 🛠️ 開發環境與技術棧 (Tech Stack)
 
 - **後端核心與邏輯**：PHP 8.x / Web API 對接
-- **資料庫管理**：MySQL 8.0 (多表關聯設計、字串時間大小比對)
+- **資料庫管理**：MySQL 8.0 (多表關聯設計)
 - **AI 整合應用**：OpenAI API (LLM 摘要控制) / Google Perspective API (語意毒性審查)
 - **前端介面**：HTML5 / CSS3 / JavaScript (Vanilla JS 異步資料渲染)
-- **開發工具**：Git / VS Code / DataGrip / 
+- **開發工具**：Git / VS Code / DataGrip  
 
 ## 📌 專案源起與畢業生自述
 本專案為**長庚大學資訊管理學系**之畢業專題作品。
