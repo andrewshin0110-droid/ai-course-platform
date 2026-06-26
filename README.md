@@ -52,7 +52,7 @@ SELECT
     COUNT(DISTINCT 課程.科目序號) AS 修過的必修課程數量,
     COALESCE(SUM(課程.學分), 0) AS 已修學分,
     學系.必修學分 AS 應修學分,
-    /* 核心精髓：利用 GREATEST 演算法，當超修學分相減為負數時，強制修正為 0，防範邊界異常數據 */
+    /* 利用 GREATEST 演算法，當超修學分相減為負數時，強制修正為 0，防範邊界異常數據 */
     GREATEST(學系.必修學分 - COALESCE(SUM(課程.學分), 0), 0) AS 還差學分 
 FROM 學生
 JOIN 修課 ON 學生.學號 = 修課.學號
@@ -88,7 +88,7 @@ FROM 課程 c
 WHERE 
     c.必選修通識 = '必修'
     AND c.領域 = '系定必修'
-    /* 核心精髓：利用 NOT EXISTS 相關子查詢，直接由資料庫底層進行動態缺修科目精密比對 */
+    /* 利用 NOT EXISTS 相關子查詢，直接由資料庫底層進行動態缺修科目精密比對 */
     AND NOT EXISTS (
         SELECT 1
         FROM 修課 r
